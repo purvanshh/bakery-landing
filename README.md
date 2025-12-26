@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# 🥐 Artisan Bakery Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A premium, modern landing page for an artisan bakery built with React 19, featuring stunning 3D visuals, smooth animations, and an elegant design aesthetic.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-19.2.3-61DAFB?style=flat&logo=react)
+![Three.js](https://img.shields.io/badge/Three.js-0.182.0-000000?style=flat&logo=three.js)
+![GSAP](https://img.shields.io/badge/GSAP-3.14.2-88CE02?style=flat&logo=greensock)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **3D Floating Bread Animation** - Immersive Three.js-powered 3D bread model with smooth floating animation
+- **Gooey Text Morphing** - Eye-catching SVG filter-based text animations
+- **Smooth Scroll Animations** - GSAP-powered entrance animations with reduced motion support
+- **Responsive Design** - Fully responsive layout that looks great on all devices
+- **Modern Grid Background** - Subtle animated grid pattern for visual depth
+- **Premium UI Components** - Carefully crafted buttons, cards, and interactive elements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🏗️ Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+bakery-landing/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── 3d/
+│   │   │   └── FloatingBread3D.js    # Three.js 3D bread component
+│   │   ├── sections/
+│   │   │   ├── Hero.js               # Hero section with CTA
+│   │   │   ├── Menu.js               # Menu showcase
+│   │   │   ├── OurStory.js           # About/story section
+│   │   │   ├── Contact.js            # Contact information
+│   │   │   └── Footer.js             # Site footer
+│   │   ├── shared/
+│   │   │   └── GridBackground.js     # Animated grid background
+│   │   └── ui/
+│   │       └── GooeyTextMorph.js     # Text morphing animation
+│   ├── App.js
+│   ├── App.css
+│   └── index.css                     # Global styles & CSS variables
+└── package.json
+```
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js 18+ 
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/purvanshh/bakery-landing.git
+   cd bakery-landing
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📦 Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Technology | Purpose |
+|------------|---------|
+| **React 19** | UI Framework |
+| **Three.js** | 3D Graphics |
+| **@react-three/fiber** | React renderer for Three.js |
+| **@react-three/drei** | Useful helpers for React Three Fiber |
+| **GSAP** | Animation library |
+| **Lucide React** | Icon library |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎨 Design System
 
-## Learn More
+### Color Palette
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Cream Background**: `#FDF8F3`
+- **Honey Accent**: `#C4A35A`
+- **Deep Brown**: `#2D1810`
+- **Warm Brown**: `#5C3D2E`
+- **Crust**: `#8B5E3C`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Typography
 
-### Code Splitting
+- **Headings**: Playfair Display (Serif)
+- **Body**: Inter (Sans-serif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📜 Available Scripts
 
-### Analyzing the Bundle Size
+| Command | Description |
+|---------|-------------|
+| `npm start` | Runs development server on port 3000 |
+| `npm run build` | Creates production build in `build/` folder |
+| `npm test` | Launches test runner |
+| `npm run eject` | Ejects from Create React App |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🌐 Sections
 
-### Making a Progressive Web App
+1. **Hero** - Main landing section with 3D bread, animated text, and CTAs
+2. **Menu** - Showcase of bakery items with beautiful cards
+3. **Our Story** - Brand story and values
+4. **Contact** - Location and contact information
+5. **Footer** - Site navigation and social links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## ♿ Accessibility
 
-### Advanced Configuration
+- Respects `prefers-reduced-motion` for users who prefer less animation
+- Semantic HTML structure
+- Proper heading hierarchy
+- Accessible color contrast ratios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📄 License
 
-### Deployment
+This project is open source and available under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👤 Author
 
-### `npm run build` fails to minify
+**Purvansh**
+- GitHub: [@purvanshh](https://github.com/purvanshh)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+<p align="center">Made with ❤️ and lots of 🥖</p>
