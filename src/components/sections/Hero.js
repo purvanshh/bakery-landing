@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import GooeyTextMorph from '../ui/GooeyTextMorph';
 import FloatingBread3D from '../3d/FloatingBread3D';
+import FloatingCards from '../ui/FloatingCards';
 import './Hero.css';
 
 const Hero = () => {
@@ -35,6 +36,7 @@ const Hero = () => {
     return (
         <section ref={heroRef} className="hero section">
             <FloatingBread3D />
+            <FloatingCards />
 
             <div className="container">
                 <div ref={contentRef} className="hero-content">
