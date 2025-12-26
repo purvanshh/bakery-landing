@@ -1,0 +1,35 @@
+.text-morph-container {
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+    min-height: 1.2em;
+}
+
+.text-morph-word {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: var(--bakery-cocoa);
+    white-space: nowrap;
+    transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+}
+
+.text-morph-enter {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+}
+
+.text-morph-exit {
+    opacity: 0;
+    transform: translateY(-10px);
+    filter: blur(4px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .text-morph-word {
+        transition: none;
+    }
+}

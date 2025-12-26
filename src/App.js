@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
+import GridBackground from './components/shared/GridBackground';
+import Hero from './components/sections/Hero';
+import Menu from './components/sections/Menu';
+import OurStory from './components/sections/OurStory';
+import Contact from './components/sections/Contact';
+import Footer from './components/sections/Footer';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <GridBackground />
+
+      <main>
+        <Hero />
+        <Menu />
+        <OurStory />
+        <Contact />
+      </main>
+
+      <Footer />
     </div>
   );
 }
