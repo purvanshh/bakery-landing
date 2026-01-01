@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Preloader from './components/ui/Preloader';
 import GridBackground from './components/shared/GridBackground';
 import Hero from './components/sections/Hero';
 import Menu from './components/sections/Menu';
@@ -8,20 +9,36 @@ import Footer from './components/sections/Footer';
 import './App.css';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadComplete = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="app">
-      <GridBackground />
+      {isLoading && (
+        <Preloader
+          onLoadComplete={handleLoadComplete}
+          minDuration={5000}
+        />
+      )}
 
-      <main>
-        <Hero />
-        <Menu />
-        <OurStory />
-        <Contact />
-      </main>
+      <div className={`app-content ${isLoading ? 'app-content--hidden' : 'app-content--visible'}`}>
+        <GridBackground />
 
-      <Footer />
+        <main>
+          <Hero />
+          <Menu />
+          <OurStory />
+          <Contact />
+        </main>
+
+        <Footer />
+      </div>
     </div>
   );
 }
 
 export default App;
+

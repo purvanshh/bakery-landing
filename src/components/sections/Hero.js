@@ -1,13 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import GooeyTextMorph from '../ui/GooeyTextMorph';
 import FloatingBread3D from '../3d/FloatingBread3D';
 import FloatingCards from '../ui/FloatingCards';
+import MenuOverlay from '../ui/MenuOverlay';
 import './Hero.css';
 
 const Hero = () => {
     const heroRef = useRef(null);
     const contentRef = useRef(null);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         // Check for reduced motion
@@ -33,6 +35,14 @@ const Hero = () => {
         }
     }, []);
 
+    const handleOpenMenu = () => {
+        setIsMenuOpen(true);
+    };
+
+    const handleCloseMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <section ref={heroRef} className="hero section">
             <FloatingBread3D />
@@ -40,7 +50,7 @@ const Hero = () => {
 
             <div className="container">
                 <div ref={contentRef} className="hero-content">
-                    <span className="hero-label">EST. 2024</span>
+                    <span className="hero-label">EST. 2026</span>
 
                     <h1 className="hero-title">
                         Let us bake a <span className="text-honey">Sweet</span> memory for you
@@ -60,7 +70,7 @@ const Hero = () => {
                     </div>
 
                     <div className="hero-cta">
-                        <button className="btn btn-primary">
+                        <button className="btn btn-primary" onClick={handleOpenMenu}>
                             Explore Our Menu
                         </button>
                         <button className="btn btn-outline">
@@ -69,6 +79,8 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+
+            <MenuOverlay isOpen={isMenuOpen} onClose={handleCloseMenu} />
         </section>
     );
 };
